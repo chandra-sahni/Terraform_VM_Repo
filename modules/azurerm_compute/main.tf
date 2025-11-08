@@ -63,8 +63,8 @@ resource "azurerm_network_interface" "nic" {
   tags = lookup(each.value, "tags", null)
 }
 resource "azurerm_network_interface_security_group_association" "nic_nsg_assoc" {
-  for_each                     = var.vms
-  network_interface_id         = azurerm_network_interface.nic[each.key].id
+  for_each                  = var.vms
+  network_interface_id      = azurerm_network_interface.nic[each.key].id
   network_security_group_id = azurerm_network_security_group.nsgs[each.key].id
 }
 resource "azurerm_linux_virtual_machine" "vm" {
@@ -85,8 +85,8 @@ resource "azurerm_linux_virtual_machine" "vm" {
   }
   source_image_reference {
     publisher = each.value.source_image_reference.publisher
-    offer=each.value.source_image_reference.offer
-    sku=each.value.source_image_reference.sku
+    offer     = each.value.source_image_reference.offer
+    sku       = each.value.source_image_reference.sku
     version   = each.value.source_image_reference.version
   }
   tags = lookup(each.value, "tags", null)
