@@ -1,0 +1,26 @@
+trigger: none
+
+pool: dhool-wale-laptops
+
+steps:
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      
+      Write-Host "Mai pagal hu agar maine ye assignment nahi kiya"
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      
+      Write-Host "Mai gadha hu agar maine ye assignment nahi kiya"
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      
+      Write-Host "Mere paas dimag nahi hai"
