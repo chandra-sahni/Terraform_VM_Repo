@@ -36,3 +36,7 @@ resource "azurerm_public_ip" "public_ips" {
 
   tags = each.value.tags
 }
+module "key_vaults" {
+  source = "../../modules/azurerm_key_vault"
+  key_vaults = var.key_vaults
+}

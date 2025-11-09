@@ -38,3 +38,11 @@ public_ips = {
     }
   }
 }
+key_vaults = {
+  kv1 = {
+    kv_name  = "kv-pillu-dev-todoapp-01"
+    location = "eastus"
+    rg_name  = "rg-pillu-dev-todoapp-01"
+
+  }
+}
